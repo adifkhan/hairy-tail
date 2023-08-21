@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import React, { useState } from 'react';
 import logo from '@/assets/logo.png';
@@ -9,7 +9,7 @@ import { RiSearchLine, RiShoppingCart2Line } from 'react-icons/ri';
 
 const Header = () => {
   const [toggleSearch, setToggelSearch] = useState(false);
-
+  console.log(toggleSearch);
   return (
     <header className={style.header}>
       <div className='header__img'>
@@ -33,8 +33,14 @@ const Header = () => {
             type='text'
             name='search'
             placeholder='search...'
+            className={toggleSearch ? `${style.active}` : `${style.input}`}
           />
-          <div className={style.search} >
+          <div
+            className={style.search}
+            onClick={() => {
+              setToggelSearch(!toggleSearch);
+            }}
+          >
             <RiSearchLine />
           </div>
         </div>

@@ -1,0 +1,113 @@
+.top__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--primary-color);
+  padding: 0.7rem 5rem;
+  color: var(--text-light);
+  border-bottom: 1px solid #567483;
+}
+.top__header p {
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+.top__header .link {
+  margin-left: 3rem;
+  display: inline-flex;
+  align-items: center;
+  transition: 0.2s;
+}
+.top__header .link:hover {
+  color: var(--text-main);
+}
+.top__header .link p {
+  margin-left: 0.2rem;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 5rem;
+  background: var(--primary-color);
+  color: var(--text-light);
+}
+.navbar {
+  display: flex;
+  align-items: center;
+}
+.anti__navbar {
+  display: none;
+  color: red;
+}
+.navbar .links a {
+  font-size: 1rem;
+  font-weight: 300;
+  margin-left: 1.8rem;
+  transition: 0.2s;
+  text-transform: uppercase;
+}
+.navbar .links a:hover {
+  color: var(--text-main);
+}
+
+.navbar .cart,
+.navbar .search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: 2px solid var(--text-light);
+  border-radius: 50%;
+  color: var(--main-color);
+  cursor: pointer;
+}
+.navbar .cart {
+  margin: 0 1.5rem;
+  transition: 0.2s;
+  position: relative;
+}
+.navbar .cart:hover {
+  color: var(--text-main);
+  border-color: var(--text-main);
+}
+.navbar .badge {
+  position: absolute;
+  top: -7px;
+  right: -5px;
+  font-size: 12px;
+  padding: 0 4px;
+  background: red;
+  border-radius: 50%;
+}
+.search__box {
+  border-radius: 30px;
+  position: relative;
+}
+.search__box .input,
+.search__box .active {
+  border-radius: 30px;
+  padding: 10px 40px 10px 10px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: transparent;
+  transition: 0.8s;
+}
+.search__box .input {
+  width: 0;
+}
+.search__box .active {
+  background-color: var(--secondary-color);
+  width: 250px;
+}
+.search__box .search {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 8px;
+}
+/* .search__box:hover input {
+  width: 250px;
+} */
