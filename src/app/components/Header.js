@@ -5,17 +5,29 @@ import logo from '@/assets/logo.png';
 import Image from 'next/image';
 import style from '@/styles/header.module.css';
 import Link from 'next/link';
-import { RiSearchLine, RiShoppingCart2Line } from 'react-icons/ri';
+import { RiCloseLine, RiMenuLine, RiSearchLine, RiShoppingCart2Line } from 'react-icons/ri';
 
 const Header = () => {
   const [toggleSearch, setToggelSearch] = useState(false);
-  console.log(toggleSearch);
+  const [menuToggle, setMenuToggle] = useState(false);
   return (
     <header className={style.header}>
-      <div className='header__img'>
-        <Image src={logo} width={150} height={30} alt='logo'></Image>
+      <div className={style.header__img}>
+        <Image 
+        className={style.image} 
+        src={logo}  
+        layout='fill'
+        sizes='100vw'
+        quality={100} alt='logo'>
+        </Image>
       </div>
-      <nav className={style.navbar}>
+      <div className={menuToggle?`${style.disabled__menu}`:`${style.active__menu}`} onClick={()=>setMenuToggle(!menuToggle)}>
+        <RiMenuLine/>
+      </div>
+      <div className={menuToggle?`${style.active__menu}`:`${style.disabled__menu}`} onClick={()=>setMenuToggle(!menuToggle)}>
+        <RiCloseLine/>
+      </div>
+      <nav className={toggleSearch?`${style.disabled__navbar}`:`${style.navbar}`}>
         <div className={style.links}>
           <Link href='/'>Home</Link>
           <Link href='/'>About</Link>
@@ -28,23 +40,37 @@ const Header = () => {
           <RiShoppingCart2Line />
           <span className={style.badge}>2</span>
         </div>
-        <div className={style.search__box}>
+        <div className={style.search} onClick={()=>setToggelSearch(!toggleSearch)}>
+            <RiSearchLine />
+        </div>
+      </nav>
+      <nav className={toggleSearch?`${style.search__navbar}`:`${style.disabled__navbar}`}>
           <input
             type='text'
             name='search'
             placeholder='search...'
-            className={toggleSearch ? `${style.active}` : `${style.input}`}
           />
-          <div
-            className={style.search}
-            onClick={() => {
-              setToggelSearch(!toggleSearch);
-            }}
-          >
+          <div className={style.search} onClick={()=>setToggelSearch(!toggleSearch)}>
             <RiSearchLine />
           </div>
-        </div>
       </nav>
+      <nav className={menuToggle?`${style.mini__menu}`:`${style.disabled__mini__menu}`}>
+      <div className={style.menu__logo}>
+        <Image 
+        className={style.image} 
+        src={logo}  
+        layout='fill'
+        sizes='100vw'
+        quality={100} alt='logo'>
+        </Image>
+      </div>
+          <Link href='/'>Home</Link>
+          <Link href='/'>About</Link>
+          <Link href='/'>Shop</Link>
+          <Link href='/'>Salons</Link>
+          <Link href='/'>FAQ</Link>
+          <Link href='/'>Contact</Link>
+        </nav>
     </header>
   );
 };

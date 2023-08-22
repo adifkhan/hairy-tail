@@ -15,16 +15,16 @@ const TopHeader = () => {
       <p>Spend $60 or more to receive free standard shipping</p>
       <div>
         <Link href='/' className={style.link}>
-          <RiLoginCircleLine />
-          <p>LOGIN</p>
-        </Link>
-        <Link href='/' className={style.link}>
           <RiAccountCircleLine />
           <p>MY ACCOUNT</p>
         </Link>
         <Link href='/' className={style.link}>
           <RiHeartLine />
           <p>WISHLIST</p>
+        </Link>
+        <Link href='/' className={style.link}>
+          <RiLoginCircleLine />
+          <p>LOGIN</p>
         </Link>
       </div>
     </section>
