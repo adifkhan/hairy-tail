@@ -1,0 +1,49 @@
+/* ====== banner styling ====== */
+.banner{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 9rem;
+    background-image: radial-gradient(circle 280px at 30% 50%, rgb(50, 57, 85) 0%, #202124 100%);
+}
+.banner__img{
+    position: relative;
+    width: 500px;
+    height: 550px;
+
+    .image{
+    object-fit: contain;    
+    }
+}
+.banner__content{
+    width: 430px;
+}
+.banner__content h2{
+    font-weight: 400;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.banner__content span{
+    color: var(--text-main);
+}
+.banner__content p{
+    text-align: justify;
+    font-size: 1.2rem;
+}
+
+/* ====== responsive styling ====== */
+@media (max-width:1200px){
+    .banner{
+        padding: 0 4rem;
+    }
+    .banner__img{
+        width: 350px;
+        height: 370px;
+    }
+    .banner__content h2{
+        font-size: 1.9rem;
+    }
+    .banner__content p{
+        font-size: .9rem;
+    }
+}
