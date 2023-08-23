@@ -62,6 +62,7 @@
 }
 .navbar .links a:hover {
   color: var(--text-main);
+  border-bottom: 1px solid var(--text-main);
 }
 .navbar .cart,
 .navbar .search,
@@ -149,7 +150,7 @@
     padding: 1.2rem 4rem;
   }
   .navbar .links a {
-    margin-left: 1rem;
+    margin-left: 1.1rem;
     font-weight: 300;
   }
   .navbar .cart,
@@ -177,8 +178,8 @@
   .navbar .cart,
   .navbar .search,
   .search__navbar .search{
-    width: 1.7rem;
-    height: 1.7rem;
+    width: 1.8rem;
+    height: 1.8rem;
     font-size: .9rem;
     border-width: 1px;
   }

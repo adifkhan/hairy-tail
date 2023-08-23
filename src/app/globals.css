@@ -33,8 +33,9 @@ a {
   padding: .8rem 1.5rem;
   background: transparent;
   font-size: 1.1rem;
+  letter-spacing: 1px;
   color: var(--text-light);
-  border: 2px solid var(--text-light);
+  border: 1px solid var(--text-light);
   border-radius: 25px;
   text-transform: uppercase;
   margin: 1rem 0;
@@ -43,4 +44,11 @@ a {
 .button:hover{
   color: var(--text-main);
   border-color: var(--text-main);
+}
+
+@media (max-width:600px){
+  .button{
+    padding: .6rem 1.2rem;
+    font-size: .9rem;
+  }
 }
