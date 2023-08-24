@@ -45,6 +45,8 @@
 
   .image{
     object-fit: contain;
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -232,6 +234,8 @@
 
   .image{
     object-fit: contain;
+    width: 100%;
+    height: 100%;
   }
 }
 .mini__menu a,

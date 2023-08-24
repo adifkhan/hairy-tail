@@ -1,15 +1,13 @@
 'use client';
 
-import Banner from './components/Banner';
-import Header from './components/Header';
-import TopHeader from './components/TopHeader';
+import Banner from './components/homecomponents/Banner';
+import Features from './components/homecomponents/Features';
 
 export default function Home() {
   return (
     <main>
-      <TopHeader />
-      <Header />
       <Banner/>
+      <Features/>
     </main>
   );
 }

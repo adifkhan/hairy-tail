@@ -45,7 +45,6 @@ a {
   color: var(--text-main);
   border-color: var(--text-main);
 }
-
 @media (max-width:600px){
   .button{
     padding: .6rem 1.2rem;

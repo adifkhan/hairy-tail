@@ -16,7 +16,6 @@ const Header = () => {
         <Image 
         className={style.image} 
         src={logo}  
-        layout='fill'
         sizes='100vw'
         quality={100} alt='logo'>
         </Image>
@@ -59,7 +58,6 @@ const Header = () => {
         <Image 
         className={style.image} 
         src={logo}  
-        layout='fill'
         sizes='100vw'
         quality={100} alt='logo'>
         </Image>
