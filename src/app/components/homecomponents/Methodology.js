@@ -34,7 +34,7 @@ const Methodology = () => {
                         className={style.icon}>
                         </Image>
                         <span>2</span>
-                    </div>
+    </div>
                     <h4>HairyTails Perfecting Tools</h4>
                     <p>Once desired coverage is achieved, gently pat the hair to help the fibre absorb more closely.</p>
                 </div>
