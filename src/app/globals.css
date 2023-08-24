@@ -29,6 +29,13 @@ a {
   color: inherit;
   text-decoration: none;
 }
+.heading h2{
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin: 2rem 0;
+}
 .button{
   padding: .8rem 1.5rem;
   background: transparent;
@@ -45,9 +52,19 @@ a {
   color: var(--text-main);
   border-color: var(--text-main);
 }
+@media (max-width:960px){
+  .heading h2{
+      font-size: 2rem;
+  }
+  }
 @media (max-width:600px){
   .button{
     padding: .6rem 1.2rem;
     font-size: .9rem;
   }
+}
+@media (max-width:480px){
+.heading h2{
+    font-size: 1.6rem;
+}
 }

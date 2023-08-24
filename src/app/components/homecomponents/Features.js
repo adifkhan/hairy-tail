@@ -21,7 +21,7 @@ import { Pagination } from 'swiper/modules';
 const Features = () => {
     return (
         <div className={style.feature__container}>
-          <div className={style.heading}>
+          <div className='heading'>
             <h2>Featured Product</h2>
           </div>
           <Swiper
