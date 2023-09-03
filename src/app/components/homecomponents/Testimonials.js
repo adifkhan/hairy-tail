@@ -8,7 +8,7 @@ const Testimonials = () => {
       <div className="heading">
         <h2>Testimonials</h2>
       </div>
-      <div className={style.testimonials__contents}>
+      <div className={style.testimonials__wrapper}>
         <div className={style.testimonial}>
           <p>
             &quot;After having gastric sleeve surgery I had a lot of thinning
