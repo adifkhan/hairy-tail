@@ -1,0 +1,34 @@
+.testimonials__container {
+  padding: 4rem 9rem;
+}
+.testimonials__contents {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.testimonial p {
+  width: 340px;
+  height: 150px;
+  font-size: 1.2rem;
+  text-align: justify;
+  background: var(--secondary-color);
+  padding: 2rem;
+  border: 2px solid var(--text-main);
+  border-radius: 10px;
+  cursor: default;
+  transition: 0.5s;
+}
+.testimonial p:hover {
+  transform: scale(1.2);
+}
+.testimonial h6 {
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: var(--text-main);
+  margin: 1.5rem 0 0 1rem;
+}
+.stars {
+  font-size: 1.5rem;
+  margin: 1rem 0 0 1rem;
+  color: yellow;
+}
