@@ -107,3 +107,42 @@
   color: var(--text-main);
   border-color: var(--text-main);
 }
+@media (max-width: 1200px) {
+  .contact__container {
+    padding: 4rem 5rem;
+  }
+}
+@media (max-width: 960px) {
+  .contact__container {
+    padding: 4rem 2rem;
+  }
+  .contact__wrapper {
+    width: 300px;
+  }
+  .contact__form {
+    width: 350px;
+  }
+}
+@media (max-width: 768px) {
+  .contact__container {
+    flex-direction: column-reverse;
+    padding: 4rem 5rem;
+  }
+  .contact__wrapper {
+    width: 100%;
+    margin-top: 2rem;
+  }
+  .contact__form {
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .contact__container {
+    padding: 4rem 2rem;
+  }
+}
+@media (max-width: 480px) {
+  .contact__container {
+    padding: 4rem 1rem;
+  }
+}
