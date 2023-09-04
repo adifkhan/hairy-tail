@@ -6,7 +6,6 @@ import Contact from "./components/homecomponents/Contact";
 import Features from "./components/homecomponents/Features";
 import Methodology from "./components/homecomponents/Methodology";
 import Testimonials from "./components/homecomponents/Testimonials";
-import Footer from "./components/shared/Footer";
 
 export default function Home() {
   return (
@@ -17,7 +16,6 @@ export default function Home() {
       <About />
       <Testimonials />
       <Contact />
-      <Footer />
     </main>
   );
 }

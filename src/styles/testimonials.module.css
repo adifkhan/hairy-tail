@@ -1,5 +1,5 @@
 .testimonials__container {
-  padding: 4rem 5rem;
+  padding: 2rem 5rem;
 }
 .testimonials__wrapper {
   display: flex;
@@ -42,7 +42,7 @@
 /* Responsiveness */
 @media (max-width: 1200px) {
   .testimonials__container {
-    padding: 3rem;
+    padding: 2rem 3rem;
   }
 }
 @media (max-width: 960px) {

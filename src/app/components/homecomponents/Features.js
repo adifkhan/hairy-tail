@@ -25,6 +25,7 @@ const Features = () => {
         <h2>Featured Product</h2>
       </div>
       <Swiper
+        loop={true}
         pagination={{
           clickable: true,
         }}
