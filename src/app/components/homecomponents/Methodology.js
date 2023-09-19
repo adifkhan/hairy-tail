@@ -1,18 +1,36 @@
-import React from "react";
+import React, { useEffect } from "react";
 import style from "@/styles/methodology.module.css";
 import Image from "next/image";
 import icon1 from "@/assets/icons/icon1.png";
 import icon2 from "@/assets/icons/icon2.png";
 import icon3 from "@/assets/icons/icon3.png";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const Methodology = () => {
+  // animation starts here //
+  useEffect(() => {
+    gsap.from(".method", {
+      x: 300,
+      opacity: 0,
+      stagger: 0.5,
+      scrollTrigger: {
+        trigger: ".method",
+        start: "top 80%",
+        toggleActions: "restart none none reset",
+        markers: true,
+      },
+    });
+  }, []);
+  // animation ends here //
   return (
     <div className={style.methodology__container}>
       <dir className="heading">
-        <h2>How It Works</h2>
+        <h2 className="slide_trigger">How It Works</h2>
       </dir>
       <div className={style.methodology__wrapper}>
-        <div className={style.methodology}>
+        <div className={`${style.methodology} method`}>
           <div className={style.icon__box}>
             <Image
               src={icon1}
@@ -29,7 +47,7 @@ const Methodology = () => {
             and gently shake to achieve desired result.
           </p>
         </div>
-        <div className={style.methodology}>
+        <div className={`${style.methodology} method`}>
           <div className={style.icon__box}>
             <Image
               src={icon2}
@@ -45,7 +63,7 @@ const Methodology = () => {
             fibre absorb more closely.
           </p>
         </div>
-        <div className={style.methodology}>
+        <div className={`${style.methodology} method`}>
           <div className={style.icon__box}>
             <Image
               src={icon3}

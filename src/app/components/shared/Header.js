@@ -48,12 +48,24 @@ const Header = () => {
         }
       >
         <div className={style.links}>
-          <Link href="/">Home</Link>
-          <Link href="/">About</Link>
-          <Link href="/">Shop</Link>
-          <Link href="/">Salons</Link>
-          <Link href="/">FAQ</Link>
-          <Link href="/">Contact</Link>
+          <Link href="/" className="nav_item">
+            Home
+          </Link>
+          <Link href="/" className="nav_item">
+            About
+          </Link>
+          <Link href="/" className="nav_item">
+            Shop
+          </Link>
+          <Link href="/" className="nav_item">
+            Salons
+          </Link>
+          <Link href="/" className="nav_item">
+            FAQ
+          </Link>
+          <Link href="/" className="nav_item">
+            Contact
+          </Link>
         </div>
         <div className={style.cart}>
           <RiShoppingCart2Line />

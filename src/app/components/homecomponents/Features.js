@@ -1,24 +1,36 @@
-import React, { useRef, useState } from "react";
+"use client";
+
+import React, { useEffect, useRef, useState } from "react";
 import style from "@/styles/features.module.css";
 import Image from "next/image";
 import bottle1 from "@/assets/products/bottle1.png";
 import bottle2 from "@/assets/products/bottle2.png";
 import bottle3 from "@/assets/products/bottle3.png";
 import bottle4 from "@/assets/products/bottle4.png";
-
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-
 // import './styles.css';
-
-// import required modules
 import { Pagination } from "swiper/modules";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const Features = () => {
+  // animation starts here //
+  useEffect(() => {
+    gsap.from(".myslide", {
+      y: 300,
+      opacity: 0,
+      stagger: 0.3,
+      scrollTrigger: {
+        trigger: ".slider",
+        start: "top 80%",
+        toggleActions: "restart none none reset",
+      },
+    });
+  }, []);
+  // animation ends here //
   return (
     <div className={style.feature__container}>
       <div className="heading">
@@ -64,9 +76,9 @@ const Features = () => {
           },
         }}
         modules={[Pagination]}
-        className={style.feature__slide}
+        className="slider"
       >
-        <SwiperSlide className={style.feature}>
+        <SwiperSlide className={`${style.feature} myslide`}>
           <div className={style.image__wrapper}>
             <Image
               src={bottle1}
@@ -79,7 +91,7 @@ const Features = () => {
           <p>$30</p>
           <button className="button">Shop Now</button>
         </SwiperSlide>
-        <SwiperSlide className={style.feature}>
+        <SwiperSlide className={`${style.feature} myslide`}>
           <div className={style.image__wrapper}>
             <Image
               src={bottle2}
@@ -92,7 +104,7 @@ const Features = () => {
           <p>$30</p>
           <button className="button">Shop Now</button>
         </SwiperSlide>
-        <SwiperSlide className={style.feature}>
+        <SwiperSlide className={`${style.feature} myslide`}>
           <div className={style.image__wrapper}>
             <Image
               src={bottle3}
@@ -105,7 +117,7 @@ const Features = () => {
           <p>$30</p>
           <button className="button">Shop Now</button>
         </SwiperSlide>
-        <SwiperSlide className={style.feature}>
+        <SwiperSlide className={`${style.feature} myslide`}>
           <div className={style.image__wrapper}>
             <Image
               src={bottle4}
@@ -118,7 +130,7 @@ const Features = () => {
           <p>$30</p>
           <button className="button">Shop Now</button>
         </SwiperSlide>
-        <SwiperSlide className={style.feature}>
+        <SwiperSlide className={`${style.feature} myslide`}>
           <div className={style.image__wrapper}>
             <Image
               src={bottle1}
@@ -131,7 +143,7 @@ const Features = () => {
           <p>$30</p>
           <button className="button">Shop Now</button>
         </SwiperSlide>
-        <SwiperSlide className={style.feature}>
+        <SwiperSlide className={`${style.feature} myslide`}>
           <div className={style.image__wrapper}>
             <Image
               src={bottle2}
@@ -144,7 +156,7 @@ const Features = () => {
           <p>$30</p>
           <button className="button">Shop Now</button>
         </SwiperSlide>
-        <SwiperSlide className={style.feature}>
+        <SwiperSlide className={`${style.feature} myslide`}>
           <div className={style.image__wrapper}>
             <Image
               src={bottle3}
@@ -157,7 +169,7 @@ const Features = () => {
           <p>$30</p>
           <button className="button">Shop Now</button>
         </SwiperSlide>
-        <SwiperSlide className={style.feature}>
+        <SwiperSlide className={`${style.feature} myslide`}>
           <div className={style.image__wrapper}>
             <Image
               src={bottle4}

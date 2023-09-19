@@ -23,6 +23,7 @@ body {
   margin: 0 auto;
   background: var(--primary-color);
   color: var(--text-light);
+  overflow-x: hidden;
 }
 
 a {
