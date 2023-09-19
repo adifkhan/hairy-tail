@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect } from "react";
 import style from "@/styles/methodology.module.css";
 import Image from "next/image";
@@ -14,12 +16,13 @@ const Methodology = () => {
     gsap.from(".method", {
       x: 300,
       opacity: 0,
+      duration: 1,
+      ease: "circ.out",
       stagger: 0.5,
       scrollTrigger: {
         trigger: ".method",
         start: "top 80%",
         toggleActions: "restart none none reset",
-        markers: true,
       },
     });
   }, []);

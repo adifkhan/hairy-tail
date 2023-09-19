@@ -22,6 +22,8 @@ const Features = () => {
     gsap.from(".myslide", {
       y: 300,
       opacity: 0,
+      duration: 1,
+      ease: "circ.out",
       stagger: 0.3,
       scrollTrigger: {
         trigger: ".slider",
