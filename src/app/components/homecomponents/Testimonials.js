@@ -11,13 +11,13 @@ const Testimonials = () => {
   // animation starts here //
   useEffect(() => {
     gsap.from(".reviews", {
-      y: 300,
+      y: 400,
       opacity: 0,
       duration: 1,
       ease: "circ.out",
       scrollTrigger: {
         trigger: "#to_trigger",
-        start: "bottom 80%",
+        start: "bottom 70%",
         toggleActions: "restart none none reset",
       },
     });

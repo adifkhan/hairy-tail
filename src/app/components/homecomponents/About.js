@@ -18,7 +18,7 @@ const About = () => {
       ease: "circ.out",
       scrollTrigger: {
         trigger: ".about_text",
-        start: "top 80%",
+        start: "top 70%",
         toggleActions: "restart none none reset",
       },
     });
@@ -29,7 +29,7 @@ const About = () => {
       ease: "circ.out",
       scrollTrigger: {
         trigger: ".about_photo",
-        start: "top 80%",
+        start: "top 70%",
         toggleActions: "restart none none reset",
       },
     });

@@ -27,7 +27,7 @@ const Features = () => {
       stagger: 0.3,
       scrollTrigger: {
         trigger: ".slider",
-        start: "top 80%",
+        start: "top 70%",
         toggleActions: "restart none none reset",
       },
     });

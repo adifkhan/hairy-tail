@@ -21,7 +21,7 @@ const Methodology = () => {
       stagger: 0.5,
       scrollTrigger: {
         trigger: ".method",
-        start: "top 80%",
+        start: "top 70%",
         toggleActions: "restart none none reset",
       },
     });

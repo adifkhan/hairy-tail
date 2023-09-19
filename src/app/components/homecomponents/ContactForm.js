@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import style from "@/styles/contact.module.css";
 import {
@@ -22,7 +24,7 @@ const ContactForm = () => {
           rows="1"
           placeholder="Your Message Here..."
         ></textarea>
-        <button className="button">send message</button>
+        <button className="button social_trigger">send message</button>
       </form>
       <section className={style.social__icon}>
         <div className={style.icon}>
