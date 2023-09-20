@@ -1,0 +1,74 @@
+.register_container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  min-height: calc(100vh - 110px);
+  background-image: url("../assets/bg-image.jpg");
+  background-size: cover;
+  background-position: center bottom;
+}
+.register_wrapper {
+  position: relative;
+  width: 400px;
+  padding: 1rem 2rem;
+  border: 2px solid var(--text-light);
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+}
+.register_wrapper > h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 400;
+}
+.register_wrapper form {
+  z-index: 10;
+}
+.input_group {
+  border-bottom: 1px solid var(--text-light);
+  width: 100%;
+  height: 50px;
+  margin: 15px 0;
+  position: relative;
+}
+.input_group input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--text-light);
+  letter-spacing: 1px;
+}
+.input_group label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  pointer-events: none;
+  transition: 0.5s ease;
+}
+.input_group input:focus ~ label,
+.input_group input:valid ~ label {
+  top: 0;
+}
+.term_condition {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.submit_btn {
+  width: 100%;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.5rem 0;
+  margin: 1rem 0;
+  color: var(--text-light);
+  background: var(--secondary-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.link {
+  color: var(--text-main);
+}

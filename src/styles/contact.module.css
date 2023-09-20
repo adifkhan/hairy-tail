@@ -103,6 +103,7 @@
   border-radius: 50%;
   margin: 1rem;
   transition: 0.5s;
+  cursor: pointer;
 }
 .icon:hover {
   color: var(--text-main);
