@@ -16,6 +16,10 @@
   display: inline-flex;
   align-items: center;
   transition: 0.2s;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--text-light);
 }
 .top__header .link:hover {
   color: var(--text-main);
@@ -206,7 +210,7 @@
   .top__header {
     padding: 0.6rem 1rem;
     flex-direction: column;
-    height: 4.2rem;
+    height: 4.5rem;
   }
   .header {
     padding: 0.6rem 1rem;
