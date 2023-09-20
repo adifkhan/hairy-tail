@@ -1,7 +1,7 @@
 import React from "react";
-import style from "@/styles/footer.module.css";
+import style from "../../styles/footer.module.css";
 import Image from "next/image";
-import logo from "@/assets/footerImg.png";
+import logo from "../../assets/logo.png";
 import {
   RiArrowRightDoubleLine,
   RiMailFill,

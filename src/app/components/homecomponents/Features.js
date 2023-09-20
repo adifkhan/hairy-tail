@@ -1,12 +1,12 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import style from "@/styles/features.module.css";
+import style from "../../styles/features.module.css";
 import Image from "next/image";
-import bottle1 from "@/assets/products/bottle1.png";
-import bottle2 from "@/assets/products/bottle2.png";
-import bottle3 from "@/assets/products/bottle3.png";
-import bottle4 from "@/assets/products/bottle4.png";
+import bottle1 from "../../assets/products/bottle1.png";
+import bottle2 from "../../assets/products/bottle2.png";
+import bottle3 from "../../assets/products/bottle3.png";
+import bottle4 from "../../assets/products/bottle4.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";

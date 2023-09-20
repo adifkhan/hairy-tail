@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect } from "react";
-import style from "@/styles/testimonials.module.css";
+import style from "../../styles/testimonials.module.css";
 import { RiStarSFill } from "react-icons/ri";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";

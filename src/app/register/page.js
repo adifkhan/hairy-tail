@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import styles from "@/styles/register.module.css";
+import styles from "../styles/register.module.css";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import axios from "axios";
@@ -18,14 +18,24 @@ const Register = () => {
     password: "",
   });
 
-  const onSignUp = async (event) => {
+  const handleRegister = async (event) => {
     event.preventDefault();
+    if (user.password.length < 6) {
+      setError("Password must be at least 6 characters");
+      return;
+    }
+    if (user.password.length > 16) {
+      setError("Password can't be more than 16 characters");
+      return;
+    }
     try {
       setLoading(true);
-      const response = await axios.post("/api/users/signup", user);
+      const response = await axios.post("/api/users/register", user);
+      setError("");
       router.push("/login");
     } catch (error) {
-      setError(error.message);
+      const message = JSON.parse(error.request.response);
+      setError(message?.message || error.message);
     } finally {
       setLoading(false);
     }
@@ -35,7 +45,7 @@ const Register = () => {
       <div className={styles.bg_image}></div>
       <div className={styles.register_wrapper}>
         <h2>Register</h2>
-        <form>
+        <form onSubmit={handleRegister}>
           <div className={styles.input_group}>
             <input
               type="text"
@@ -70,6 +80,7 @@ const Register = () => {
             />
             <label htmlFor="">Confirm Password</label>
           </div>
+          <p className="errormessage">{error}</p>
           <div className={styles.term_condition}>
             <input
               type="checkbox"
@@ -92,7 +103,6 @@ const Register = () => {
             />
           </div>
         </form>
-        <p className="errormessage">{error}</p>
         <p>
           Already have an account? let&apos;s{" "}
           <Link href="/login" className={styles.link}>

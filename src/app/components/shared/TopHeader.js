@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import style from "@/styles/header.module.css";
+import style from "../../styles/header.module.css";
 import {
   RiAccountCircleLine,
   RiHeartLine,
@@ -22,7 +22,7 @@ const TopHeader = () => {
           <RiHeartLine />
           <p>WISHLIST</p>
         </Link>
-        <Link href="/" className={style.link}>
+        <Link href="/login" className={style.link}>
           <RiLoginCircleLine />
           <p>LOGIN</p>
         </Link>

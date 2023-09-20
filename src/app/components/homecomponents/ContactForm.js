@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import style from "@/styles/contact.module.css";
+import style from "../../styles/contact.module.css";
 import {
   RiFacebookFill,
   RiGlobalLine,

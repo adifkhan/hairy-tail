@@ -1,7 +1,8 @@
 .register_container {
   display: flex;
   justify-content: center;
-  padding: 2rem;
+  align-items: center;
+  padding: 1rem;
   min-height: calc(100vh - 110px);
   background-image: url("../assets/bg-image.jpg");
   background-size: cover;
@@ -10,10 +11,10 @@
 .register_wrapper {
   position: relative;
   width: 400px;
-  padding: 1rem 2rem;
+  padding: 2rem;
   border: 2px solid var(--text-light);
   border-radius: 10px;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(8px);
 }
 .register_wrapper > h2 {
   text-align: center;
@@ -27,7 +28,7 @@
   border-bottom: 1px solid var(--text-light);
   width: 100%;
   height: 50px;
-  margin: 15px 0;
+  margin: 15px 0 0;
   position: relative;
 }
 .input_group input {

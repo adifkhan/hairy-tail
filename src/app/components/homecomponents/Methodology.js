@@ -1,11 +1,11 @@
 "use client";
 
 import React, { useEffect } from "react";
-import style from "@/styles/methodology.module.css";
+import style from "../../styles/methodology.module.css";
 import Image from "next/image";
-import icon1 from "@/assets/icons/icon1.png";
-import icon2 from "@/assets/icons/icon2.png";
-import icon3 from "@/assets/icons/icon3.png";
+import icon1 from "../../assets/icons/icon1.png";
+import icon2 from "../../assets/icons/icon2.png";
+import icon3 from "../../assets/icons/icon3.png";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);

@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import style from "@/styles/banner.module.css";
-import bannerBg from "@/assets/banner-img.png";
+import style from "../../styles/banner.module.css";
+import bannerBg from "../../assets/banner-img.png";
 
 const Banner = () => {
   return (

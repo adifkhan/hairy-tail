@@ -1,5 +1,5 @@
 import React from "react";
-import style from "@/styles/contact.module.css";
+import style from "../../styles/contact.module.css";
 import { RiMailFill, RiMapPin2Fill, RiPhoneFill } from "react-icons/ri";
 import ContactForm from "./ContactForm";
 

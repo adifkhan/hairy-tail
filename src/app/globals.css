@@ -57,6 +57,11 @@ a {
 .swiper-wrapper {
   padding-bottom: 40px;
 }
+.errormessage {
+  color: rgb(255, 2, 2);
+  margin: 5px 0;
+}
+
 @media (max-width: 960px) {
   .heading h2 {
     font-size: 2rem;
@@ -73,3 +78,5 @@ a {
     font-size: 1.6rem;
   }
 }
+/* hairytail */
+/* oiCFIwPkF5Qifqdb */

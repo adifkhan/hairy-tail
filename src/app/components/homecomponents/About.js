@@ -1,9 +1,9 @@
 "use client";
 
 import React, { useEffect } from "react";
-import style from "@/styles/about.module.css";
+import style from "../../styles/about.module.css";
 import Image from "next/image";
-import modelImg from "@/assets/model.png";
+import modelImg from "../../assets/model.png";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
