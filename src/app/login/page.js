@@ -60,12 +60,14 @@ const Login = () => {
             />
           </div>
         </form>
-        <p>
-          New to HairyTail? let&apos;s{" "}
-          <Link href="/register" className={styles.link}>
-            Register
+        <Link href="/forgotpassword" className={styles.link}>
+          Forgot Password?
+        </Link>
+        <div className={styles.toggle_btn}>
+          <Link href="/register">
+            <button>Register Instead</button>
           </Link>
-        </p>
+        </div>
       </div>
     </section>
   );

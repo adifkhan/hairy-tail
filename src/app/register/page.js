@@ -103,12 +103,11 @@ const Register = () => {
             />
           </div>
         </form>
-        <p>
-          Already have an account? let&apos;s{" "}
-          <Link href="/login" className={styles.link}>
-            Login
+        <div className={styles.toggle_btn}>
+          <Link href="/login">
+            <button>Login Instead</button>
           </Link>
-        </p>
+        </div>
       </div>
     </section>
   );

@@ -58,7 +58,7 @@ a {
   padding-bottom: 40px;
 }
 .errormessage {
-  color: rgb(255, 2, 2);
+  color: red;
   margin: 5px 0;
 }
 

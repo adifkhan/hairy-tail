@@ -6,7 +6,6 @@ export function middleware(request: NextRequest) {
   const isPublicPath =
     path === "/login" ||
     path === "/register" ||
-    path === "/verifyemail" ||
     path === "/forgotpassword" ||
     path === "/resetpassword";
 
@@ -15,9 +14,9 @@ export function middleware(request: NextRequest) {
   if (isPublicPath && token) {
     return NextResponse.redirect(new URL("/", request.nextUrl));
   }
-  if (!isPublicPath && !token) {
-    return NextResponse.redirect(new URL("/login", request.nextUrl));
-  }
+  // if (!isPublicPath && !token) {
+  //   return NextResponse.redirect(new URL("/login", request.nextUrl));
+  // }
 }
 
 // See "Matching Paths" below to learn more
