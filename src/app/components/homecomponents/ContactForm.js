@@ -17,13 +17,7 @@ const ContactForm = () => {
         <input type="text" name="name" id="" placeholder="Name" />
         <input type="email" name="email" id="" placeholder="Emain" />
         <input type="text" name="subject" id="" placeholder="Subject" />
-        <textarea
-          name="message"
-          id=""
-          cols="30"
-          rows="1"
-          placeholder="Your Message Here..."
-        ></textarea>
+        <textarea name="message" placeholder="Your Message Here..."></textarea>
         <button className="button social_trigger">send message</button>
       </form>
       <section className={style.social__icon}>

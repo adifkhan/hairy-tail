@@ -29,9 +29,9 @@ const Methodology = () => {
   // animation ends here //
   return (
     <div className={style.methodology__container}>
-      <dir className="heading">
+      <div className="heading">
         <h2 className="slide_trigger">How It Works</h2>
-      </dir>
+      </div>
       <div className={style.methodology__wrapper}>
         <div className={`${style.methodology} method`}>
           <div className={style.icon__box}>
