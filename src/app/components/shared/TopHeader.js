@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import Link from "next/link";
 import style from "../../styles/header.module.css";
 import {
@@ -15,20 +15,6 @@ import { UserContext } from "../../../helpers/UserContext";
 const TopHeader = () => {
   const router = useRouter();
   const { currentUser, setCurrentUser } = useContext(UserContext);
-
-  /*
-   const [user, setUser] = useState({});
-
-  useEffect(() => {
-    const getauth = async () => {
-      const res = await axios.get("/api/users/auth");
-      if (res.data.success) {
-        setUser(res.data.user);
-      }
-    };
-    getauth();
-  }, []); 
-  */
 
   const handleLogOut = async () => {
     try {

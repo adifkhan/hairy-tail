@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect } from "react";
 import style from "../../styles/features.module.css";
 import Image from "next/image";
 import bottle1 from "../../assets/products/bottle1.png";
@@ -185,10 +185,6 @@ const Features = () => {
           <button className="button">Shop Now</button>
         </SwiperSlide>
       </Swiper>
-      {/* <div className={style.feature__wrapper}>
-            
-            
-          </div> */}
     </div>
   );
 };

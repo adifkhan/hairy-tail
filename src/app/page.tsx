@@ -1,5 +1,3 @@
-"use client";
-
 import About from "./components/homecomponents/About";
 import Banner from "./components/homecomponents/Banner";
 import Contact from "./components/homecomponents/Contact";
