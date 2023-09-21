@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Link from "next/link";
 import style from "../../styles/header.module.css";
 import {
@@ -10,10 +10,14 @@ import {
 } from "react-icons/ri";
 import { useRouter } from "next/navigation";
 import axios from "axios";
+import { UserContext } from "../../../helpers/UserContext";
 
 const TopHeader = () => {
   const router = useRouter();
-  const [user, setUser] = useState({});
+  const { currentUser, setCurrentUser } = useContext(UserContext);
+
+  /*
+   const [user, setUser] = useState({});
 
   useEffect(() => {
     const getauth = async () => {
@@ -23,11 +27,13 @@ const TopHeader = () => {
       }
     };
     getauth();
-  }, []);
+  }, []); 
+  */
+
   const handleLogOut = async () => {
     try {
       await axios.get("/api/users/logout");
-      setUser({});
+      setCurrentUser({});
       router.push("/login");
     } catch (error) {
       console.log(error.message);
@@ -46,10 +52,10 @@ const TopHeader = () => {
           <RiHeartLine />
           <p>WISHLIST</p>
         </Link>
-        {user?.email ? (
+        {currentUser?.email ? (
           <button className={style.link} onClick={handleLogOut}>
             <RiLoginCircleLine />
-            <p>LOG OUT</p>
+            <p>LOGOUT</p>
           </button>
         ) : (
           <Link href="/login" className={style.link}>

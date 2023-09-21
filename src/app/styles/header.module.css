@@ -20,6 +20,7 @@
   border: none;
   outline: none;
   color: var(--text-light);
+  cursor: pointer;
 }
 .top__header .link:hover {
   color: var(--text-main);

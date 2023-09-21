@@ -1,15 +1,17 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import styles from "../styles/register.module.css";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import axios from "axios";
+import { UserContext } from "../../helpers/UserContext";
 
 const Login = () => {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const { setCurrentUser } = useContext(UserContext);
 
   const [user, setUser] = useState({
     email: "",
@@ -20,6 +22,7 @@ const Login = () => {
     try {
       setLoading(true);
       const response = await axios.post("/api/users/login", user);
+      setCurrentUser({ email: user.email });
       router.push("/");
     } catch (error) {
       const message = JSON.parse(error.request.response);
