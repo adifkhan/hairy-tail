@@ -11,10 +11,39 @@ import {
   RiSearchLine,
   RiShoppingCart2Line,
 } from "react-icons/ri";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
   const [toggleSearch, setToggelSearch] = useState(false);
   const [menuToggle, setMenuToggle] = useState(false);
+  const pathname = usePathname();
+
+  const navLinks = [
+    {
+      name: "Home",
+      path: "/",
+    },
+    {
+      name: "About",
+      path: "/about",
+    },
+    {
+      name: "Shop",
+      path: "/shop",
+    },
+    {
+      name: "Salons",
+      path: "/salons",
+    },
+    {
+      name: "FAQ",
+      path: "/faq",
+    },
+    {
+      name: "Contact",
+      path: "/contact",
+    },
+  ];
   return (
     <header className={style.header}>
       <div className={style.header__img}>
@@ -48,24 +77,15 @@ const Header = () => {
         }
       >
         <div className={style.links}>
-          <Link href="/" className="nav_item">
-            Home
-          </Link>
-          <Link href="/" className="nav_item">
-            About
-          </Link>
-          <Link href="/" className="nav_item">
-            Shop
-          </Link>
-          <Link href="/" className="nav_item">
-            Salons
-          </Link>
-          <Link href="/" className="nav_item">
-            FAQ
-          </Link>
-          <Link href="/" className="nav_item">
-            Contact
-          </Link>
+          {navLinks.map((link, index) => (
+            <Link
+              key={index}
+              href={link.path}
+              className={pathname === link.path ? style.active_nav : ""}
+            >
+              {link.name}
+            </Link>
+          ))}
         </div>
         <div className={style.cart}>
           <RiShoppingCart2Line />
@@ -105,12 +125,15 @@ const Header = () => {
             alt="logo"
           ></Image>
         </div>
-        <Link href="/">Home</Link>
-        <Link href="/">About</Link>
-        <Link href="/">Shop</Link>
-        <Link href="/">Salons</Link>
-        <Link href="/">FAQ</Link>
-        <Link href="/">Contact</Link>
+        {navLinks.map((link, index) => (
+          <Link
+            key={index}
+            href={link.path}
+            className={pathname === link.path ? style.active_mini_nav : ""}
+          >
+            {link.name}
+          </Link>
+        ))}
       </nav>
     </header>
   );

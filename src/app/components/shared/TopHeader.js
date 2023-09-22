@@ -28,8 +28,10 @@ const TopHeader = () => {
 
   return (
     <section className={style.top__header}>
-      <p>Spend $60 or more to receive free standard shipping</p>
-      <div>
+      <p className={style.shipping_text}>
+        Spend $60 or more to receive free standard shipping
+      </p>
+      <div className={style.navlinks}>
         <Link href="/" className={style.link}>
           <RiAccountCircleLine />
           <p>MY ACCOUNT</p>

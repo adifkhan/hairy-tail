@@ -3,11 +3,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.7rem 5rem;
+  padding: 1rem 5rem 0.7rem;
   border-bottom: 1px solid #567483;
 }
-.top__header p {
+.top__header .shipping_text {
   font-size: 1rem;
+}
+.top__header p {
+  font-size: 1.1rem;
   font-weight: 300;
   letter-spacing: 1px;
 }
@@ -47,8 +50,6 @@
 .header__img {
   width: 200px;
   height: 50px;
-  /* opacity: 0;
-  animation: slideRight 1s ease forwards; */
 
   .image {
     object-fit: contain;
@@ -56,7 +57,6 @@
     height: 100%;
   }
 }
-
 .navbar {
   display: flex;
   align-items: center;
@@ -66,12 +66,16 @@
   font-size: 1.2rem;
   letter-spacing: 1px;
   font-weight: 300;
-  margin-left: 1.6rem;
+  margin-left: 1.2rem;
+  padding: 0.2rem 0.5rem;
   text-transform: uppercase;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
+  border-radius: 10px;
 }
+.active_nav,
 .navbar .links a:hover {
   color: var(--text-main);
+  border-top: 1px solid var(--text-main);
   border-bottom: 1px solid var(--text-main);
 }
 .navbar .cart,
@@ -126,6 +130,8 @@
 .search__navbar input {
   border-radius: 30px;
   padding: 7px 10px;
+  margin-right: -33px;
+  z-index: -1;
   background: var(--secondary-color);
   border: none;
   outline: none;
@@ -147,71 +153,73 @@
     transform: scaleX(1);
   }
 }
-/* @keyframes slideRight {
-  0% {
-    transform: translateX(-100px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-} */
 
 /*========= responsive styling =========*/
 @media (max-width: 1200px) {
   .top__header {
-    padding: 0.7rem 4rem;
+    padding: 1rem 4rem 0.7rem;
   }
   .top__header .link {
-    margin-left: 1.5rem;
+    margin-left: 2rem;
   }
   .header {
-    padding: 1.2rem 4rem;
+    padding: 1rem 4rem;
   }
   .navbar .links a {
     margin-left: 1.1rem;
-    font-weight: 300;
   }
   .navbar .cart,
   .navbar .search {
-    margin-left: 1rem;
+    margin-left: 1.5rem;
+  }
+  .search__navbar input {
+    margin-right: -34px;
   }
 }
 @media (max-width: 960px) {
   .top__header {
-    padding: 0.7rem 2rem;
+    padding: 1rem 2rem 0.7rem;
   }
   .top__header .link {
-    margin-left: 1rem;
-  }
-  .top__header p {
-    font-size: 0.9rem;
+    margin-left: 1.2rem;
   }
   .header {
     padding: 1rem 2rem;
   }
+  .header__img {
+    width: 180px;
+    height: 40px;
+  }
   .navbar .links a {
-    margin-left: 0.8rem;
-    font-size: 1rem;
+    margin-left: 0.6rem;
+    font-size: 1.1rem;
   }
   .navbar .cart,
   .navbar .search,
   .search__navbar .search {
-    width: 1.8rem;
-    height: 1.8rem;
     font-size: 0.9rem;
     border-width: 1px;
   }
   .navbar .cart {
     margin: 0 0 0 1rem;
   }
+  .search__navbar input {
+    margin-right: -32px;
+  }
 }
 @media (max-width: 768px) {
   .top__header {
-    padding: 0.6rem 1rem;
+    padding: 1rem 1rem 0.6rem;
     flex-direction: column;
-    height: 4.5rem;
+    height: 5.3rem;
+  }
+  .top__header .navlinks {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  .top__header .link {
+    margin: 0;
   }
   .header {
     padding: 0.6rem 1rem;
@@ -222,7 +230,7 @@
   }
   .active__menu {
     display: block;
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
   .navbar .links {
     display: none;
@@ -234,7 +242,7 @@
     top: 46px;
     background: var(--secondary-color);
     width: 100%;
-    padding: 1rem 5rem;
+    padding: 1rem 5rem 2rem;
     transition: all 0.5s;
     z-index: 100;
   }
@@ -260,16 +268,17 @@
   .mini__menu a,
   .disabled__mini__menu a {
     display: block;
-    padding-top: 1rem;
-    font-size: 1.2rem;
+    padding: 0.1rem 0 0.1em 1rem;
+    margin-top: 0.7rem;
+    font-size: 1.6rem;
     font-weight: 300;
-    border-bottom: 1px solid var(--primary-color);
+    border-bottom: 1px solid var(--text-main);
+    border-radius: 10px;
   }
   .mini__menu a:hover,
-  .disabled__mini__menu a:hover {
+  .active_mini_nav {
     color: var(--text-main);
   }
-
   .search__navbar {
     height: 1.8rem;
   }
@@ -281,6 +290,9 @@
 }
 @media (max-width: 480px) {
   .top__header p {
+    font-size: 1rem;
+  }
+  .top__header .shipping_text {
     font-size: 0.8rem;
   }
   .mini__menu a,
@@ -288,6 +300,6 @@
     font-size: 1rem;
   }
   .search__navbar input {
-    width: 240px;
+    width: 250px;
   }
 }
