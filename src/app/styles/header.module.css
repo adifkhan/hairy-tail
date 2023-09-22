@@ -270,7 +270,7 @@
     display: block;
     padding: 0.1rem 0 0.1em 1rem;
     margin-top: 0.7rem;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 300;
     border-bottom: 1px solid var(--text-main);
     border-radius: 10px;
@@ -292,7 +292,7 @@
   }
   .mini__menu a,
   .disabled__mini__menu a {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
   .search__navbar input {
     width: 300px;
