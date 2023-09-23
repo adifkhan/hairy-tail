@@ -130,6 +130,7 @@ const Header = () => {
             key={index}
             href={link.path}
             className={pathname === link.path ? style.active_mini_nav : ""}
+            onClick={() => setMenuToggle(false)}
           >
             {link.name}
           </Link>

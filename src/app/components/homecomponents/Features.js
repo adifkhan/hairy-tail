@@ -14,6 +14,7 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Link from "next/link";
 gsap.registerPlugin(ScrollTrigger);
 
 const Features = () => {
@@ -91,7 +92,9 @@ const Features = () => {
           </div>
           <h4>PALMOKIVER</h4>
           <p>$30</p>
-          <button className="button">Shop Now</button>
+          <Link href="/shop" className="button">
+            Shop Now
+          </Link>
         </SwiperSlide>
         <SwiperSlide className={`${style.feature} myslide`}>
           <div className={style.image__wrapper}>
@@ -104,7 +107,9 @@ const Features = () => {
           </div>
           <h4>FIBRE PACK</h4>
           <p>$30</p>
-          <button className="button">Shop Now</button>
+          <Link href="/shop" className="button">
+            Shop Now
+          </Link>
         </SwiperSlide>
         <SwiperSlide className={`${style.feature} myslide`}>
           <div className={style.image__wrapper}>
@@ -117,7 +122,9 @@ const Features = () => {
           </div>
           <h4>SHAMPOO</h4>
           <p>$30</p>
-          <button className="button">Shop Now</button>
+          <Link href="/shop" className="button">
+            Shop Now
+          </Link>
         </SwiperSlide>
         <SwiperSlide className={`${style.feature} myslide`}>
           <div className={style.image__wrapper}>
@@ -130,7 +137,9 @@ const Features = () => {
           </div>
           <h4>HAIR CREAM</h4>
           <p>$30</p>
-          <button className="button">Shop Now</button>
+          <Link href="/shop" className="button">
+            Shop Now
+          </Link>
         </SwiperSlide>
         <SwiperSlide className={`${style.feature} myslide`}>
           <div className={style.image__wrapper}>
@@ -143,7 +152,9 @@ const Features = () => {
           </div>
           <h4>PALMOLIVER</h4>
           <p>$30</p>
-          <button className="button">Shop Now</button>
+          <Link href="/shop" className="button">
+            Shop Now
+          </Link>
         </SwiperSlide>
         <SwiperSlide className={`${style.feature} myslide`}>
           <div className={style.image__wrapper}>
@@ -156,7 +167,9 @@ const Features = () => {
           </div>
           <h4>FIBRE PACK</h4>
           <p>$30</p>
-          <button className="button">Shop Now</button>
+          <Link href="/shop" className="button">
+            Shop Now
+          </Link>
         </SwiperSlide>
         <SwiperSlide className={`${style.feature} myslide`}>
           <div className={style.image__wrapper}>
@@ -169,7 +182,9 @@ const Features = () => {
           </div>
           <h4>SHAMPOO</h4>
           <p>$30</p>
-          <button className="button">Shop Now</button>
+          <Link href="/shop" className="button">
+            Shop Now
+          </Link>
         </SwiperSlide>
         <SwiperSlide className={`${style.feature} myslide`}>
           <div className={style.image__wrapper}>
@@ -182,7 +197,9 @@ const Features = () => {
           </div>
           <h4>HAIR CREAM</h4>
           <p>$30</p>
-          <button className="button">Shop Now</button>
+          <Link href="/shop" className="button">
+            Shop Now
+          </Link>
         </SwiperSlide>
       </Swiper>
     </div>

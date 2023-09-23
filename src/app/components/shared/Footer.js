@@ -23,37 +23,37 @@ const Footer = () => {
         </div>
         <div className={style.link__wrapper}>
           <h2>Quick link</h2>
-          <a href="#">
+          <a href="/">
             <span>
               <RiArrowRightDoubleLine />
             </span>{" "}
             Home
           </a>
-          <a href="#">
+          <a href="/about">
             <span>
               <RiArrowRightDoubleLine />
             </span>{" "}
             About
           </a>
-          <a href="#">
+          <a href="/shop">
             <span>
               <RiArrowRightDoubleLine />
             </span>{" "}
             shop
           </a>
-          <a href="#">
+          <a href="salons">
             <span>
               <RiArrowRightDoubleLine />
             </span>{" "}
             salons
           </a>
-          <a href="#">
+          <a href="/faq">
             <span>
               <RiArrowRightDoubleLine />
             </span>{" "}
             faq
           </a>
-          <a href="#">
+          <a href="/contact">
             <span>
               <RiArrowRightDoubleLine />
             </span>{" "}
@@ -90,10 +90,7 @@ const Footer = () => {
           </div>
         </div>
         <div className={style.newsletter}>
-          <h2>
-            subscribe to our
-            <br /> newsletter
-          </h2>
+          <h2>subscribe to our newsletter</h2>
           <div className={style.search__box}>
             <input type="text" name="search" placeholder="search..." />
             <div className={style.search}>

@@ -6,6 +6,7 @@ import Image from "next/image";
 import modelImg from "../../assets/model.png";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Link from "next/link";
 gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
@@ -51,7 +52,9 @@ const About = () => {
           last all day with the use of the HAIRYTAL fixing spray. It is Vegan
           friendly and not tested on animals.
         </p>
-        <button className="button">shop now</button>
+        <Link href="/about" className="button">
+          see more
+        </Link>
       </div>
       <div className="about_photo">
         <div className={style.about__img}>

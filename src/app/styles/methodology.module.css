@@ -73,6 +73,6 @@
     padding: 2rem 1rem;
   }
   .methodology {
-    flex: 0 0 320px;
+    flex: 0 0 100%;
   }
 }

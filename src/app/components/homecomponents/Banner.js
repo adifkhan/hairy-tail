@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import style from "../../styles/banner.module.css";
 import bannerBg from "../../assets/banner-img.png";
+import Link from "next/link";
 
 const Banner = () => {
   return (
@@ -27,7 +28,9 @@ const Banner = () => {
               men and women, and a fuller looking scalp in 30 seconds with our
               safe, natural, easy to apply hair fibers
             </p>
-            <button className="button">Shop Now</button>
+            <Link href="/salons" className="button">
+              see salons
+            </Link>
           </div>
         </div>
         <div className={style.banner} id="banner2">
